@@ -1,0 +1,599 @@
+:root{
+    /* variables */
+    --primary-color: rgba(0, 0, 0, 0.412);
+    --secondary-color: #dbafe0;
+    --dark-secondary-color: #cd98d3;
+    --title-on-color: #d1e000;
+    --text-on-color: white;
+    --dark-background-color: #1a1a19;
+    --comprar-background-color: #c2b5fae0;  
+    --dark-white-color: rgb(242, 239, 239);
+    --semi-dark-white-color:rgb(233, 227, 227);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text-on-color);
+}
+
+.contenedor{
+    width: 1200px;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+
+/* TIPOGRAFIA */
+
+h1, h2, h3, a{
+    font-family: "Anton", sans-serif;
+}
+
+figcaption{
+    font-family: "Indie Flower", cursive;
+    text-align: justify;
+    margin: 0 8px;
+    font-weight: bold;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h3{   
+    color: #dee76ddb;
+}
+
+h1, h2{
+    color: var(--title-on-color);
+}
+
+h3, header nav a{
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+h1:hover, #subtitulo:hover, #artistas h2:hover{
+    color: var(--secondary-color);
+}
+
+#comprar-entradas h2:hover, #artistas h2:hover, #comprar-entradas h2:hover, #galeria h2:hover, #entrevistas-artistas h2:hover{
+    font-size: 2.5rem;
+    transition: all .5s;
+}
+
+/* Navegación */
+header nav{
+    width: 800px;
+    display: flex;
+}
+
+header nav a{
+    width: calc(100% / 4);
+    margin: 0 auto;
+    display: block;
+    line-height: 75px;
+    background-color: var(--secondary-color);
+    text-align: center;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+header nav a:hover{
+    background-color: var(--dark-secondary-color);
+}
+
+/* Header */
+header{
+    background-color: var(--secondary-color);
+}
+
+header img{
+    width: 250px;
+}
+
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/*SECTIONS*/
+
+section{
+    padding: 40px;
+}
+
+/*Banner*/
+#banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 750px;
+    background-image: url(img/fondos/fondo-negro.png), url(img/banner.webp);
+    background-repeat: no-repeat;
+    background-size: contain, cover;
+    background-position:bottom;
+}
+
+#banner div{
+    width: 1000px;
+    color: #fff;
+}
+
+#textoBanner{
+    text-align: justify;
+    font-weight: 600;
+    margin-top: 22px;
+}
+
+/* Enlace Más info */
+.botoncito {
+    display: block;
+    border: 2px solid var(--primary-color);
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 20px auto;
+    color: #eff4a8;
+    text-align: center;
+    transition: all .5s;
+    text-decoration: none;
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+}
+
+.botoncito:hover{
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    font-size: 0.9rem;
+    color: var(--title-on-color);
+    width:200px;
+}
+
+.botoncito.botonBanner{
+    color: var(--secondary-color);
+    font-size: 1rem;
+    padding: 15px;
+    border: 3px solid var(--primary-color);
+}
+
+.botoncito.botonBanner:hover{
+    background-color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+    font-size: 1.3rem;
+    color: var(--title-on-color);
+    width:300px;
+}
+
+/*ARTISTAS*/
+#artistas{
+    background-image: url(img/fondos/fondo-artistas.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--dark-background-color);
+}
+
+#artistas .contenedor > p{
+    font-weight: 500;
+}
+
+#articulos-artistas article{
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #eccef5ad;
+    transition: all .5s;
+}
+
+#articulos-artistas article:hover{
+    background-color: #e4b2f4ea;
+    color: var(--primary-color);
+    font-weight:500;
+    transform: scale(1.1);  
+}
+
+.primeraFila, .segundaFila, .terceraFila {
+    display: flex;
+    text-align: justify;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.tamaño66{
+    width: 66%;
+}
+
+.tamaño33{
+    width: 33%;
+}
+
+.tamaño50{
+    width: 50%;
+}
+
+.tamaño25{
+    width: 25%;
+}
+
+#articulos-artistas article img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+}
+
+#articulos-artistas p, #articulos-artistas h3{
+    margin: 10px;
+}
+
+#articulos-artistas p{
+    margin-bottom: 10px;
+}
+
+/*COMPRA ENTRADAS*/
+#comprar{
+    background-color: var(--comprar-background-color);
+    background-image: url(img/fondos/fondo-compra.png),url(img/fondos/fondo-negro-invertido.png);
+    background-repeat: no-repeat;
+    background-position: bottom, top;
+    background-size: contain;
+    border-bottom: 3px solid black;
+}
+
+#comprar-entradas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: justify;   
+    margin-bottom: 60px;
+    margin-top: 100px;
+}
+
+#comprar-entradas > div{
+    width: 48%;
+}
+
+#comprar-entradas h2{
+    width: 100%;
+    color: var(--primary-color);
+}
+
+#comprar-entradas h2:hover{
+    color: var(--dark-white-color);
+}
+
+#comprar-entradas p{
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+#comprar-entradas #columna1{
+    margin: 15px 0;
+}
+
+/*formulario*/
+form{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(10 , calc(120px/4));
+    margin-top: 10px;
+    gap:5px;
+}
+
+label {
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+fieldset{
+    border: none;
+}
+
+legend{
+    padding: 10px 0; 
+}
+
+label, legend{
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+form>div label{
+    margin-top: 0;
+    margin-left: 5px;
+}
+
+input, select, textarea, form input[type="submit"]:valid{
+    border: none; 
+    border-bottom: 4px solid var(--dark-secondary-color) /*rgb(149, 53, 2)*/;
+    background-color: var(--dark-white-color);
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 8px 10px 8px rgba(0, 0, 0, 0.1);
+}
+
+input:focus, select:focus, textarea:focus, form input[type="submit"]:hover{
+    outline: none;
+    border-color: #9f8bf8e0;
+    background-color: var(--semi-dark-white-color);
+}
+
+input:valid, select:valid, textarea:valid{
+    border-color: #529510;
+} 
+
+/*grid formulario*/
+
+form label[for="mail"]{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+fieldset{
+    grid-row: 3/span 2;
+    grid-column: 1;
+}
+
+fieldset label{
+    margin-right: 8px;
+}
+
+label[for="vip"]{
+    margin-right: 0;
+}
+
+label[for="cantEntradas"]{
+    grid-row: 3;
+    grid-column: 2;
+}
+
+form>select{
+    grid-row:4;
+    grid-column: 2;
+}
+
+label[for="comentario"]{
+    grid-column: 1/span 2;
+    grid-row: 5;
+}
+
+textarea{
+    grid-column:1/span 2;
+    grid-row:6/span 3;
+}
+
+form>div{
+    grid-row:9;
+    grid-column:1/span 2;  
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+input[type="submit"]{
+    grid-row: 10;
+    grid-column: 2;
+    width: 150px;
+    justify-self: end; 
+}
+
+/*Table*/
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 8px 10px 8px rgba(0, 0, 0, 0.1);
+}
+
+th{
+    background-color: var(--dark-white-color);
+    text-align: center;
+    color: var(--primary-color);
+}
+
+td{
+    text-align: right;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+table, th, td {
+    border: 3px solid var(--dark-white-color);
+    border-top: none;
+    border-bottom: none;
+}
+
+td, th{
+    padding: 15px;
+}
+
+tr:nth-child(even){
+    background-color: #d6cff4e0;
+}
+
+tbody tr:nth-child(odd){
+    background-color: #c3b8f2;
+}
+
+tbody tr:hover{
+    background-color: var(--primary-color);
+    color: var(--semi-dark-white-color);
+}
+
+td:not(:first-child) {
+    width: calc(70% / 3); /*Para que todas las celdas de cada fila tengan un mismo ancho (menos la primera de un 30%)*/
+}
+
+td:first-child{
+    text-align: left;
+    width: 30%;
+}
+
+/*GALERÍA - grilla*/
+#galeria{
+    background-color: var(--dark-background-color);
+    background-image: url(img/fondos/fondo-galeria.png), url(img/fondos/fondo-amarillo-invertido.png);
+    background-repeat: no-repeat;
+    background-position: top, bottom;
+}
+
+#galeria h2{
+    color: var(--dark-background-color);
+}
+
+#galeria h2:hover{
+    color: var(--primary-color);
+}
+
+.grid-galeria{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: repeat(4 , calc(1000px/4));
+    margin-top: 10px;
+    gap:15px;
+    color: black;
+}
+
+#galeria figure {
+    background-color: white;
+    transition: all .5s;
+} 
+
+#galeria figure:hover{
+    transform: scale(1.1);
+}
+
+#galeria figure img{
+    width: calc(100% - 20px);
+    height: calc(100% - 70px);
+    object-fit: cover;
+    object-position: center;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#galeria figure:nth-of-type(1){
+    grid-column:span 2;
+    grid-row:span 2;
+}
+
+#galeria figure:nth-of-type(3){
+    grid-row:span 3;
+}
+
+#galeria figure:nth-of-type(4){
+    grid-row:span 2;
+}
+
+#galeria figure:nth-of-type(8){
+   grid-column:span 2;
+}
+
+#galeria figure:nth-of-type(8) img{
+    object-position: top;
+}
+
+
+/*Entrevistas*/
+#entrevistas{
+    background-color: rgb(88 88 88);
+    background-image: url(img/fondos/fondo-amarillo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+#entrevistas-artistas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: justify;
+    margin-top: 60px;
+}
+
+#entrevistas-artistas article{
+    display: flex;
+    width: 50%;
+    align-items: flex-start;
+    padding: 20px 10px;
+}
+
+#entrevistas-artistas img{
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+#entrevistas-artistas h2{
+    width: 100%;
+}
+
+#entrevistas-artistas h2:hover{
+    color: var(--primary-color);
+}
+
+#entrevistas-artistas h3{
+    transition: all .5s;
+}
+
+#entrevistas-artistas article:hover h3{
+    color: var(--title-on-color);
+    font-size: 2rem;
+}
+
+/*FOOTER*/
+footer{
+    background-color: var(--secondary-color);
+    padding: 20px 0;
+    background-image: url(img/fondos/fondo-negro.png), url(img/header-footer/lollapalooza.png), url(img/fondos/fondo-negro-invertido.png);
+    height: 250px;
+    background-repeat: no-repeat;
+    background-position: bottom, center, top;
+    background-size: contain, 60%, contain;
+}
+
+footer, .logos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logos{
+    gap: 50px;
+}
+
+.logos img{
+    width: 50px;
+    height: auto;
+    transition:all .2s;
+}
+
+.logos img:hover {
+    transform: translateY(-10px); /* Traslada las imágenes 10px hacia arriba al pasar el cursor sobre ellas */
+}
